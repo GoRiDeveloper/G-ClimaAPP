@@ -6,7 +6,7 @@ export function Header ({ darkMode, handleTheme, handleSubmit }) {
 
             <a className="header__logo" href="#">
                 <img className="header__image" src="/assets/img/logo/G-Clima-logo-xxl.png" alt="logo de G-Clima" />
-                <h1 className="header__heading"> Weather App </h1>
+                <h1 className="header__heading"> G-Clima </h1>
             </a>
             <div className="header__themeToggler" onClick={handleTheme}>
                 <button 
