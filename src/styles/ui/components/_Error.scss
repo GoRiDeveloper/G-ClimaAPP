@@ -1,0 +1,78 @@
+@use "../../abstracts/mixins" as m;
+
+.error {
+    
+    @include m.modal(var(--primary-color));
+    
+    &__modal {
+
+        @include m.boxModal(var(--modal-color), var(--icons-color), var(--black));
+
+        top: 60%;
+        margin: 0 var(--min-size-3);
+
+        @include m.telephone {
+
+            top: 50%;
+
+        }
+
+    }
+
+    &__btn {
+
+        position: absolute;
+        width: 2.4rem;
+        top: .5rem;
+        right: .5rem;
+        cursor: pointer;
+
+    }
+
+    &__icon {
+
+        transition: transform .1s ease-in-out;
+
+        &:hover {
+
+            transform: scale(1.1);
+
+        }
+
+    }
+
+    &__box {
+
+        width: 9.375rem;
+        height: 9.375rem;
+        margin-bottom: var(--min-size-3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: initial;
+        border: 2px solid var(--red);
+        border-radius: 50%;
+
+    }
+
+    &__errorIcon {
+
+        width: 6.25rem;
+        fill: var(--red);
+        animation: pulse 1s infinite linear;
+
+        @include m.pulse();
+
+    }
+
+    &__heading {
+
+        margin-bottom: var(--min-size-3);
+        color: var(--red);
+        font-size: 1.5rem;
+        font-weight: 800;
+        text-align: center;
+
+    }
+
+}

@@ -1,0 +1,106 @@
+@use "variables" as v;
+
+@mixin telephone {
+    @media (min-width: v.$telephone-bp) {
+        @content;
+    };
+};
+
+@mixin tablet {
+    @media (min-width: v.$tablet-bp) {
+        @content;
+    };
+};
+
+@mixin desktop {
+    @media (min-width: v.$desktop-bp) {
+        @content;
+    };
+};
+
+@mixin boxModal ($bgColor, $borderColor, $fontColor) {
+
+    position: relative;
+    max-width: 32rem;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $bgColor;
+    border: 1px solid $borderColor;
+    border-radius: .5rem;
+    color: $fontColor;
+    transform: translateY(-115%);
+    transition: transform .7s cubic-bezier(.5, 0, 0, 1);
+
+};
+
+@mixin modal ($bgColor) {
+
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $bgColor;
+    transition: all .7s cubic-bezier(.5, 0, 0, 1);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 5;
+
+    &--active {
+
+        opacity: 1;
+        visibility: visible;
+        z-index: 5;
+
+    }
+
+};
+
+@mixin moveRight {
+
+    @keyframes moveRight {
+     
+        from {
+
+            transform: translateX(0);
+
+        }
+
+        to {
+
+            transform: translateX(100.4%);
+
+        }
+    }
+
+};
+
+@mixin pulse {
+
+    @keyframes pulse {
+        
+        0% {
+
+            transform: scale(1);
+
+        }
+
+        50% { 
+
+            transform: scale(1.2);
+
+        }
+
+        100% {
+
+            transform: scale(1);
+
+        }
+
+    }
+
+}

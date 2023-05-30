@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+$telephone-bp: 480px;
+$tablet-bp: 768px;
+$desktop-bp: 1024px;
+
+:root {
+
+    --main-font: 'Lato', sans-serif;
+    --secondary-font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    --min-size: .25rem;
+    --min-size-1: .5rem;
+    --min-size-2: .75rem;
+    --min-size-3: 1rem;
+    --max-size: 75rem;
+
+    --box-shw: inset 0px 4px 4px rgb(255 255 255 / .25);
+
+}

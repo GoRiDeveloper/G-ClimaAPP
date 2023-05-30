@@ -1,0 +1,105 @@
+@use "../../abstracts/mixins" as m;
+
+.infoWeather {
+
+    @include m.telephone {
+
+        padding-bottom: 0;
+
+    }
+
+    &__box {
+
+        padding: 0 1rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "degree   image"
+                             "info     image"
+                             "location weather";
+        color: var(--heading-color);
+
+        @include m.telephone {
+
+            padding: 0 0;
+            width: 400px;
+            height: 285px;
+
+        }
+
+    }
+
+    &__degree {
+
+        grid-area: degree;
+        font-size: 2.4rem;
+        font-weight: 300;
+
+        @include m.telephone {
+
+            font-size: 3.9rem;
+            align-self: self-end;
+
+        }
+
+    }
+
+    &__info {
+
+        grid-area: info;
+        padding: 0 .6rem;
+        align-self: center;
+        color: var(--text-color);
+        font-size: var(--min-size-2);
+
+        @include m.telephone {
+
+            font-size: var(--min-size-3);
+            font-weight: 600;
+
+        }
+
+    }
+
+    &__image {
+
+        grid-area: image;
+        max-width: 200px;
+        align-self: center;
+
+    }
+
+    &__location {
+
+        grid-area: location;
+        padding: .6rem 0 0 .6rem;
+
+        @include m.telephone {
+
+            padding: .6rem 0 0 .6rem;
+            font-size: 1.4rem;
+            font-weight: 600;
+
+        }
+
+    }
+
+    &__weather {
+
+        grid-area: weather;
+        padding-right: .2rem;
+        font-size: .8rem;
+        align-self: self-end;
+        justify-self: self-end;
+        text-align: right;
+
+        @include m.telephone {
+
+            padding: 0 .8rem .8rem 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+
+        }
+
+    }
+
+}

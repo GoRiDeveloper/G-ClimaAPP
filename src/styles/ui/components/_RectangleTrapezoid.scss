@@ -1,0 +1,18 @@
+@use "../../abstracts/mixins" as m;
+
+.rectangleTrapezoid {
+
+    position: absolute;
+    padding: 0 .625rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+
+    @include m.telephone {
+
+        padding: 0 0;
+
+    }
+
+}
